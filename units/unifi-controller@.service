@@ -1,0 +1,9 @@
+[Unit]
+Description=Ubiquiti UniFi Controller
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=linuxserver/unifi'
+
+# Setup the volumes
+Environment='DOCKER_VOLUME_CONFIG=/srv/docker/unifi-controller/instance/%i/config:/config'
